@@ -1,0 +1,619 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "54",
+               "short_name" : "54",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Jalan Cilandak Dalam I",
+               "short_name" : "Jl. Cilandak Dalam I",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "",
+               "short_name" : "",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "",
+               "short_name" : "",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "Cilandak Barat",
+               "short_name" : "Cilandak Bar.",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cilandak",
+               "short_name" : "Cilandak",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "12430",
+               "short_name" : "12430",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Jl. Cilandak Dalam I No.54, Cilandak Bar., Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430, Indonesia",
+         "geometry" : {
+            "location" : {
+               "lat" : -6.284601899999999,
+               "lng" : 106.8043197
+            },
+            "location_type" : "RANGE_INTERPOLATED",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.283252919708497,
+                  "lng" : 106.8056686802915
+               },
+               "southwest" : {
+                  "lat" : -6.285950880291502,
+                  "lng" : 106.8029707197085
+               }
+            }
+         },
+         "place_id" : "EnlKbC4gQ2lsYW5kYWsgRGFsYW0gSSBOby41NCwgQ2lsYW5kYWsgQmFyLiwgQ2lsYW5kYWssIEtvdGEgSmFrYXJ0YSBTZWxhdGFuLCBEYWVyYWggS2h1c3VzIElidWtvdGEgSmFrYXJ0YSAxMjQzMCwgSW5kb25lc2lhIhoSGAoUChIJoxZKdO7xaS4RBPyDSvLhJM8QNg",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Jakarta Selatan",
+               "short_name" : "Jakarta Selatan",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Jakarta Selatan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.202699,
+                  "lng" : 106.866844
+               },
+               "southwest" : {
+                  "lat" : -6.3655141,
+                  "lng" : 106.7373149
+               }
+            },
+            "location" : {
+               "lat" : -6.2614927,
+               "lng" : 106.8105998
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.202699,
+                  "lng" : 106.866844
+               },
+               "southwest" : {
+                  "lat" : -6.3655141,
+                  "lng" : 106.7373149
+               }
+            }
+         },
+         "place_id" : "ChIJs7AiJOzxaS4RAk1AR_7QoDk",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Jakarta",
+               "short_name" : "Jakarta",
+               "types" : [ "colloquial_area", "locality", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Jakarta, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.0886599,
+                  "lng" : 106.972825
+               },
+               "southwest" : {
+                  "lat" : -6.3708331,
+                  "lng" : 106.686211
+               }
+            },
+            "location" : {
+               "lat" : -6.2087634,
+               "lng" : 106.845599
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.0886599,
+                  "lng" : 106.972825
+               },
+               "southwest" : {
+                  "lat" : -6.3708331,
+                  "lng" : 106.686211
+               }
+            }
+         },
+         "place_id" : "ChIJnUvjRenzaS4RoobX2g-_cVM",
+         "types" : [ "colloquial_area", "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "13",
+               "short_name" : "13",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "13",
+               "short_name" : "13",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "Cilandak Barat",
+               "short_name" : "Cilandak Bar.",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cilandak",
+               "short_name" : "Cilandak",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "RT.13/RW.13, Cilandak Bar., Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.2842399,
+                  "lng" : 106.804677
+               },
+               "southwest" : {
+                  "lat" : -6.2857479,
+                  "lng" : 106.8028039
+               }
+            },
+            "location" : {
+               "lat" : -6.2848799,
+               "lng" : 106.8040109
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.283644919708498,
+                  "lng" : 106.8050894302915
+               },
+               "southwest" : {
+                  "lat" : -6.286342880291502,
+                  "lng" : 106.8023914697085
+               }
+            }
+         },
+         "place_id" : "ChIJv-q4eu7xaS4RTTOo-4igsg8",
+         "types" : [ "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "13",
+               "short_name" : "13",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "Cilandak Barat",
+               "short_name" : "Cilandak Bar.",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cilandak",
+               "short_name" : "Cilandak",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "RW.13, Cilandak Bar., Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.281206,
+                  "lng" : 106.8097119
+               },
+               "southwest" : {
+                  "lat" : -6.289317,
+                  "lng" : 106.797575
+               }
+            },
+            "location" : {
+               "lat" : -6.2857578,
+               "lng" : 106.8016144
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.281206,
+                  "lng" : 106.8097119
+               },
+               "southwest" : {
+                  "lat" : -6.289317,
+                  "lng" : 106.797575
+               }
+            }
+         },
+         "place_id" : "ChIJ5dWyZe7xaS4R4AQqkiR7oPo",
+         "types" : [ "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "12430",
+               "short_name" : "12430",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "Cilandak",
+               "short_name" : "Cilandak",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.278108599999999,
+                  "lng" : 106.8125075
+               },
+               "southwest" : {
+                  "lat" : -6.3024078,
+                  "lng" : 106.7838822
+               }
+            },
+            "location" : {
+               "lat" : -6.2922975,
+               "lng" : 106.79719
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.278108599999999,
+                  "lng" : 106.8125075
+               },
+               "southwest" : {
+                  "lat" : -6.3024078,
+                  "lng" : 106.7838822
+               }
+            }
+         },
+         "place_id" : "ChIJiZvAquTxaS4RcAYDTevFABw",
+         "types" : [ "postal_code" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Cilandak Barat",
+               "short_name" : "Cilandak Bar.",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cilandak",
+               "short_name" : "Cilandak",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Cilandak Bar., Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.2781901,
+                  "lng" : 106.812094
+               },
+               "southwest" : {
+                  "lat" : -6.3024698,
+                  "lng" : 106.78364
+               }
+            },
+            "location" : {
+               "lat" : -6.2922975,
+               "lng" : 106.79719
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.2781901,
+                  "lng" : 106.812094
+               },
+               "southwest" : {
+                  "lat" : -6.3024698,
+                  "lng" : 106.78364
+               }
+            }
+         },
+         "place_id" : "ChIJ1VrkL-bxaS4REk9mKTc_gWw",
+         "types" : [ "administrative_area_level_4", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Cilandak",
+               "short_name" : "Cilandak",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.262979899999999,
+                  "lng" : 106.8140769
+               },
+               "southwest" : {
+                  "lat" : -6.316625,
+                  "lng" : 106.766627
+               }
+            },
+            "location" : {
+               "lat" : -6.2845276,
+               "lng" : 106.8001396
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.262979899999999,
+                  "lng" : 106.8140769
+               },
+               "southwest" : {
+                  "lat" : -6.316625,
+                  "lng" : 106.766627
+               }
+            }
+         },
+         "place_id" : "ChIJMw2qM8PxaS4R6gJqiuEoMJ8",
+         "types" : [ "administrative_area_level_3", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Kota Jakarta Selatan",
+               "short_name" : "Kota Jakarta Selatan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.202699,
+                  "lng" : 106.866844
+               },
+               "southwest" : {
+                  "lat" : -6.3655141,
+                  "lng" : 106.7373149
+               }
+            },
+            "location" : {
+               "lat" : -6.2689913,
+               "lng" : 106.8060388
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.202699,
+                  "lng" : 106.866844
+               },
+               "southwest" : {
+                  "lat" : -6.3655141,
+                  "lng" : 106.7373149
+               }
+            }
+         },
+         "place_id" : "ChIJs7AiJOzxaS4R_1UOI9HJhic",
+         "types" : [ "administrative_area_level_2", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Daerah Khusus Ibukota Jakarta",
+               "short_name" : "Daerah Khusus Ibukota Jakarta",
+               "types" : [ "administrative_area_level_1", "locality", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Daerah Khusus Ibukota Jakarta, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -5.1843219,
+                  "lng" : 106.972825
+               },
+               "southwest" : {
+                  "lat" : -6.3708331,
+                  "lng" : 106.3831259
+               }
+            },
+            "location" : {
+               "lat" : -6.17511,
+               "lng" : 106.8650395
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -5.1843219,
+                  "lng" : 106.972825
+               },
+               "southwest" : {
+                  "lat" : -6.3708331,
+                  "lng" : 106.3831259
+               }
+            }
+         },
+         "place_id" : "ChIJnUvjRenzaS4RILjULejFAAE",
+         "types" : [ "administrative_area_level_1", "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 6.216999899999999,
+                  "lng" : 141.0425
+               },
+               "southwest" : {
+                  "lat" : -11.1082999,
+                  "lng" : 94.7351
+               }
+            },
+            "location" : {
+               "lat" : -0.7892749999999999,
+               "lng" : 113.921327
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 6.216999899999999,
+                  "lng" : 141.0425
+               },
+               "southwest" : {
+                  "lat" : -11.1082999,
+                  "lng" : 94.7351
+               }
+            }
+         },
+         "place_id" : "ChIJtwRkSdcHTCwRhfStG-dNe-M",
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
