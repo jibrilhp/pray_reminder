@@ -1,4 +1,4 @@
-# pray_reminder
-Ibadah Reminder 
+# Pray Reminder v2
+Root from Ibadah Reminder (https://github.com/jibrilhp/ibadah_reminder)
 
-Masih dalam pengerjaan :)
+I hope this application will reminds many people to Ibadah :)

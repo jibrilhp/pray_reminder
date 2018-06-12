@@ -16,10 +16,14 @@
  * under the License.
  */
 
-//Inisiasi Line Bot SDK dan ambil secret AccessToken 
+//Init LinebotSDK and get secret key
 require_once('./linebot_sdk/LINEBotTiny.php');
 require_once('./secret/flag.php');
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
-include('reminder_lang_id.php');
+require_once('./func/reminder_main_func.php');
+
+//get the language from userid and set the language
+
+include('./lang/reminder_lang_id.php');

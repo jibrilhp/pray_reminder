@@ -37,6 +37,10 @@ class PrayReminder
     public function get_user_settings($userid) {
         return 0;
     }
+
+    public function get_user_language($userid) {
+        
+    }
     
 }
 
