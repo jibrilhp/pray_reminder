@@ -1,0 +1,570 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Mal Cinere Depok",
+               "short_name" : "Mal Cinere Depok",
+               "types" : [ "establishment", "point_of_interest", "premise", "shopping_mall" ]
+            },
+            {
+               "long_name" : "Pangkalan Jati",
+               "short_name" : "Pangkalan Jati",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cinere",
+               "short_name" : "Cinere",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Mal Cinere Depok, Pangkalan Jati, Cinere, Kota Depok, Jawa Barat, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.323403799999999,
+                  "lng" : 106.7842861
+               },
+               "southwest" : {
+                  "lat" : -6.324987699999999,
+                  "lng" : 106.7834904
+               }
+            },
+            "location" : {
+               "lat" : -6.3241608,
+               "lng" : 106.7838254
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.322846769708498,
+                  "lng" : 106.7852372302915
+               },
+               "southwest" : {
+                  "lat" : -6.325544730291502,
+                  "lng" : 106.7825392697085
+               }
+            }
+         },
+         "place_id" : "ChIJR5JGOEbuaS4Rjt4CIV_VAK8",
+         "types" : [ "establishment", "point_of_interest", "premise", "shopping_mall" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "38",
+               "short_name" : "38",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Haji Rosyid",
+               "short_name" : "Haji Rosyid",
+               "types" : [ "premise" ]
+            },
+            {
+               "long_name" : "Jalan Cinere Raya",
+               "short_name" : "Jl. Cinere Raya",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "",
+               "short_name" : "",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "",
+               "short_name" : "",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "Cinere",
+               "short_name" : "Cinere",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cinere",
+               "short_name" : "Cinere",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "16514",
+               "short_name" : "16514",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Jl. Cinere Raya Blok Haji Rosyid No.38, Cinere, Kota Depok, Jawa Barat 16514, Indonesia",
+         "geometry" : {
+            "location" : {
+               "lat" : -6.3241915,
+               "lng" : 106.7838587
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.322842519708497,
+                  "lng" : 106.7852076802915
+               },
+               "southwest" : {
+                  "lat" : -6.325540480291502,
+                  "lng" : 106.7825097197085
+               }
+            }
+         },
+         "place_id" : "ChIJv8S8_FfuaS4RM_Ex_OTGVMI",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Bursa Mebel",
+               "short_name" : "Bursa Mebel",
+               "types" : [ "establishment", "point_of_interest", "subpremise" ]
+            },
+            {
+               "long_name" : "Lantai 2",
+               "short_name" : "Lantai 2",
+               "types" : [ "subpremise" ]
+            },
+            {
+               "long_name" : "Mall Cinere",
+               "short_name" : "Mall Cinere",
+               "types" : [ "premise" ]
+            },
+            {
+               "long_name" : "1",
+               "short_name" : "1",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Jalan Cinere Raya",
+               "short_name" : "Jl. Cinere Raya",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Pangkalan Jati",
+               "short_name" : "Pangkalan Jati",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cinere",
+               "short_name" : "Cinere",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "16514",
+               "short_name" : "16514",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Bursa Mebel, Mall Cinere, Jl. Cinere Raya No.1, Pangkalan Jati, Cinere, Kota Depok, Jawa Barat 16514, Indonesia",
+         "geometry" : {
+            "location" : {
+               "lat" : -6.3244232,
+               "lng" : 106.783951
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.323074219708499,
+                  "lng" : 106.7852999802915
+               },
+               "southwest" : {
+                  "lat" : -6.325772180291502,
+                  "lng" : 106.7826020197085
+               }
+            }
+         },
+         "place_id" : "ChIJw_auQEbuaS4RBH9QnWpwlWo",
+         "types" : [ "establishment", "point_of_interest", "subpremise" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Depok",
+               "short_name" : "Depok",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Depok, Kota Depok, Jawa Barat, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.3144141,
+                  "lng" : 106.918848
+               },
+               "southwest" : {
+                  "lat" : -6.461283,
+                  "lng" : 106.716747
+               }
+            },
+            "location" : {
+               "lat" : -6.4024844,
+               "lng" : 106.7942405
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.3144141,
+                  "lng" : 106.918848
+               },
+               "southwest" : {
+                  "lat" : -6.461283,
+                  "lng" : 106.716747
+               }
+            }
+         },
+         "place_id" : "ChIJn968KAjsaS4R8CQFFW1XAQM",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Pangkalan Jati",
+               "short_name" : "Pangkalan Jati",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "Cinere",
+               "short_name" : "Cinere",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Pangkalan Jati, Cinere, Kota Depok, Jawa Barat, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.314519,
+                  "lng" : 106.7992601
+               },
+               "southwest" : {
+                  "lat" : -6.3279799,
+                  "lng" : 106.777725
+               }
+            },
+            "location" : {
+               "lat" : -6.3219635,
+               "lng" : 106.7898163
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.314519,
+                  "lng" : 106.7992601
+               },
+               "southwest" : {
+                  "lat" : -6.3279799,
+                  "lng" : 106.777725
+               }
+            }
+         },
+         "place_id" : "ChIJ1UFwhUDuaS4RgnOsYTQRZD8",
+         "types" : [ "administrative_area_level_4", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "16513",
+               "short_name" : "16513",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "16513, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.3139238,
+                  "lng" : 106.8093947
+               },
+               "southwest" : {
+                  "lat" : -6.3328801,
+                  "lng" : 106.7782363
+               }
+            },
+            "location" : {
+               "lat" : -6.3229995,
+               "lng" : 106.79719
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.3139238,
+                  "lng" : 106.8093947
+               },
+               "southwest" : {
+                  "lat" : -6.3328801,
+                  "lng" : 106.7782363
+               }
+            }
+         },
+         "place_id" : "ChIJo_7k00HuaS4RsSWs2eg59qw",
+         "types" : [ "postal_code" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Cinere",
+               "short_name" : "Cinere",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Cinere, Kota Depok, Jawa Barat, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.3144141,
+                  "lng" : 106.809174
+               },
+               "southwest" : {
+                  "lat" : -6.350388,
+                  "lng" : 106.7723919
+               }
+            },
+            "location" : {
+               "lat" : -6.3360895,
+               "lng" : 106.7883416
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.3144141,
+                  "lng" : 106.809174
+               },
+               "southwest" : {
+                  "lat" : -6.350388,
+                  "lng" : 106.7723919
+               }
+            }
+         },
+         "place_id" : "ChIJn4Py5lzuaS4RWEVoKjTXOkQ",
+         "types" : [ "administrative_area_level_3", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Kota Depok",
+               "short_name" : "Kota Depok",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Kota Depok, Jawa Barat, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -6.3144141,
+                  "lng" : 106.918848
+               },
+               "southwest" : {
+                  "lat" : -6.461283,
+                  "lng" : 106.716747
+               }
+            },
+            "location" : {
+               "lat" : -6.4024844,
+               "lng" : 106.7942405
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -6.3144141,
+                  "lng" : 106.918848
+               },
+               "southwest" : {
+                  "lat" : -6.461283,
+                  "lng" : 106.716747
+               }
+            }
+         },
+         "place_id" : "ChIJ05eiIFbpaS4RF7JvMUJA_Rw",
+         "types" : [ "administrative_area_level_2", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Jawa Barat",
+               "short_name" : "Jawa Barat",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Jawa Barat, Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -5.9147008,
+                  "lng" : 108.839768
+               },
+               "southwest" : {
+                  "lat" : -7.820987000000001,
+                  "lng" : 106.370506
+               }
+            },
+            "location" : {
+               "lat" : -7.090910999999999,
+               "lng" : 107.668887
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -5.9147008,
+                  "lng" : 108.839768
+               },
+               "southwest" : {
+                  "lat" : -7.820987000000001,
+                  "lng" : 106.370506
+               }
+            }
+         },
+         "place_id" : "ChIJf0dSgjnmaC4Rfp2O_FSkGLw",
+         "types" : [ "administrative_area_level_1", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Indonesia",
+               "short_name" : "ID",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Indonesia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 6.216999899999999,
+                  "lng" : 141.0425
+               },
+               "southwest" : {
+                  "lat" : -11.1082999,
+                  "lng" : 94.7351
+               }
+            },
+            "location" : {
+               "lat" : -0.7892749999999999,
+               "lng" : 113.921327
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 6.216999899999999,
+                  "lng" : 141.0425
+               },
+               "southwest" : {
+                  "lat" : -11.1082999,
+                  "lng" : 94.7351
+               }
+            }
+         },
+         "place_id" : "ChIJtwRkSdcHTCwRhfStG-dNe-M",
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
