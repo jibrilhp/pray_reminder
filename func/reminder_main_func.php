@@ -83,7 +83,7 @@ class PrayReminder
                 $dt_local->setTimezone(new DateTimeZone($tzone));
                 $dlocal = $dt_local->format("Y-m-d H:i:s");
                 if (new DateTime() > new DateTime($dlocal)) {
-                    $ar = array("id_code"=>$dt_weather,"cuaca"=>$datares['weather'][0]['main']);
+                    $ar = array("id_code"=>$dt_weather,"cuaca"=>$datares['weather'][0]['id']);
                     return $ar;
                     break;
                     }
