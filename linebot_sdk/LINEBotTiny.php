@@ -51,6 +51,80 @@ if (!function_exists('hash_equals')) {
     }
 }
 
+
+//edit ....
+
+    
+function exec_get($fullurl,$channelAccessToken)
+{
+		
+		$header = array(
+            "Content-Type: application/json",
+            'Authorization: Bearer '.$channelAccessToken,
+        );
+
+		
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_VERBOSE, 1);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);		
+		curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+		curl_setopt($ch, CURLOPT_URL, $fullurl);
+		
+		$returned =  curl_exec($ch);
+	
+		return($returned);
+}
+
+
+
+function exec_url($fullurl,$channelAccessToken,$message)
+{
+		
+		$header = array(
+            "Content-Type: application/json",
+            'Authorization: Bearer '.$channelAccessToken,
+        );
+
+		
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_VERBOSE, 1);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+		curl_setopt($ch, CURLOPT_POST,           1 );
+		curl_setopt($ch, CURLOPT_POSTFIELDS,     $message); 
+		curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+		curl_setopt($ch, CURLOPT_URL, $fullurl);
+		
+		$returned =  curl_exec($ch);
+	
+		return($returned);
+}
+
+
+
+function exec_url_aja($fullurl)
+	{
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_HEADER, 0);
+			curl_setopt($ch, CURLOPT_VERBOSE, 1);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+			curl_setopt($ch, CURLOPT_URL, $fullurl);
+			
+			$returned =  curl_exec($ch);
+		
+			return($returned);
+    }
+    
 class LINEBotTiny
 {
     public function __construct($channelAccessToken, $channelSecret)
@@ -58,6 +132,21 @@ class LINEBotTiny
         $this->channelAccessToken = $channelAccessToken;
         $this->channelSecret = $channelSecret;
     }
+
+    public function profile($userId)
+    {
+      
+		return json_decode(exec_get('https://api.line.me/v2/bot/profile/'.$userId,$this->channelAccessToken));
+       
+    }
+
+    public function pushMessage($message) 
+    {
+        
+		$response = exec_url('https://api.line.me/v2/bot/message/push',$this->channelAccessToken,json_encode($message));
+       
+    }
+
 
     public function parseEvents()
     {
@@ -118,4 +207,6 @@ class LINEBotTiny
         $signature = base64_encode($hash);
         return $signature;
     }
+
+    
 }

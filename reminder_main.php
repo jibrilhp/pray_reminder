@@ -22,8 +22,42 @@ require_once('./secret/flag.php');
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
+
+$userID 	= $client->parseEvents()[0]['source']['userId'];
+
+$replyToken = $client->parseEvents()[0]['replyToken'];
+$timestamp	= $client->parseEvents()[0]['timestamp'];
+
+
+$message 	= $client->parseEvents()[0]['message'];
+$messageid 	= $client->parseEvents()[0]['message']['id'];
+
+$profile = $client->profile($userID);
+$name = $profile->displayName;
+
+
 require_once('./func/reminder_main_func.php');
 
+$remind = new PrayReminder();
 //get the language from userid and set the language
+if ($remind->get_user_settings($userID) == "user_exist") {
+$lang = $remind->get_user_language($userID);
+    switch($lang) {
+        case "0x0421":
+            include('./lang/reminder_lang_id.php');
+        break;
 
-include('./lang/reminder_lang_id.php');
+        case "0x0C09":
+            include('./lang/reminder_lang_en.php');
+        break;
+
+        default:
+            include('./lang/reminder_lang_id.php');
+
+    }
+  
+} else {
+    include('./lang/reminder_lang_id.php');
+}
+
+?>
