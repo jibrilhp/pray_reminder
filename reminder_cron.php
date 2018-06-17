@@ -16,9 +16,20 @@ if (empty($_GET['key']) || $_GET['key'] !== cron_key) {
 
 
 require_once('./func/reminder_cron_func.php');
-
 $xd = new PrayReminder_Cron();
-$xd->sent_broadcast("Uc2873b83985161fca764bb1c858663d8","Hai Bril!!!");
+
+//test to sent broadcast...
+if (isset($_GET['coba']) && $_GET['coba'] === 'ok') {
+  
+    $xd->sent_broadcast("<id line>","<Message>");
+
+    exit();
+}
+
+//search athan time and reminds where athan time = local time
+
+$xd->run_cron_athan();
+
 
 
 ?>

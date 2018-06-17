@@ -105,7 +105,7 @@ class PrayReminder
         require($_SERVER['DOCUMENT_ROOT'] . "/new/secret/database.php");
 
         if (isset($cityname)) {
-            $sql = "SELECT p_zone FROM tb_line WHERE p_city REGEXP ?";
+            $sql = "SELECT p_zone FROM tb_line WHERE p_city_weather REGEXP ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s",$cityname);
             if ($stmt->execute()) {
@@ -113,6 +113,7 @@ class PrayReminder
             while ($stmt->fetch()) {
                 $tzone = $arg1;
             }
+            
             return $tzone;
             }
                     

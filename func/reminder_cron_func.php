@@ -25,6 +25,7 @@ class PrayReminder_Cron
                     )));
         $client->pushMessage($rep);
         sleep(1);
+  
     return "success";
     }
 
@@ -54,33 +55,48 @@ class PrayReminder_Cron
         while ($stmt->fetch()) {
             date_default_timezone_set($zone);
             $time_now = date("H:i");
-            
+            $remind = new PrayReminder();
+            $out = $remind->get_forecast_data($cityweather);
+            $res = $pp->get_status_weather($out['cuaca'],$lang,$line);
+           
             if ($time_now == $fajr) {
-                $remind = new PrayReminder();
-                $out = $remind->get_forecast_data($cityweather);
-                $res = $pp->get_status_weather($out['cuaca'],$lang,$line);
+               
+                    $final_res =  $pp->get_message_to_sent($lang,"1",$city) . chr(10) . chr(10) . $res;
+                    $pp->sent_broadcast($line,$final_res);
 
-                $final_res =  get_message_to_sent($lang,"1",$city) . chr(10) . chr(10) . $res;
-                $pp->sent_broadcast($line,$final_res);
             } elseif ($time_now == $dhuhr) {
                 if ($jumat == true) {
-
+                    $final_res =  $pp->get_message_to_sent($lang,"2a",$city) . chr(10) . chr(10) . $res;
+                    $pp->sent_broadcast($line,$final_res);
+    
                 } else {
-
+                    $final_res =  $pp->get_message_to_sent($lang,"2b",$city) . chr(10) . chr(10) . $res;
+                    $pp->sent_broadcast($line,$final_res);
+    
                 }
             } elseif ($time_now == $asr) {
-                # code...
+                $final_res =  $pp->get_message_to_sent($lang,"3",$city) . chr(10) . chr(10) . $res;
+                $pp->sent_broadcast($line,$final_res);
+
             } elseif ($time_now == $maghrib) {
-                # code...
+                $final_res =  $pp->get_message_to_sent($lang,"4",$city) . chr(10) . chr(10) . $res;
+                $pp->sent_broadcast($line,$final_res);
+
             } elseif ($time_now == $isha) {
-                
+                $final_res =  $pp->get_message_to_sent($lang,"5",$city) . chr(10) . chr(10) . $res;
+                $pp->sent_broadcast($line,$final_res);
+
             } elseif ($time_now == "09:15") {
                 if ($dhuha == "1") {
-
+                $final_res =  $pp->get_message_to_sent($lang,"6",$city) . chr(10) . chr(10) . $res;
+                $pp->sent_broadcast($line,$final_res);
+    
                 }
             } elseif ($time_now == "02:00") {
                 if ($tahaj == "1") {
-
+                $final_res =  $pp->get_message_to_sent($lang,"7",$city) . chr(10) . chr(10) . $res;
+                $pp->sent_broadcast($line,$final_res);
+    
                 }
             }
         }
@@ -88,17 +104,20 @@ class PrayReminder_Cron
         
     }
 
-    public function get_message_to_sent ($langid,$status_salat,$city_name) {
-        $remind = new PrayReminder_Cron();
-
+    public function get_message_to_sent ($langid,$status,$city_name) {
+        $GLOBALS['status'] = $status;
+        $GLOBALS['city_name'] = $city_name;
         switch ($langid) {
             case "0x0421":
             //indonesian
-            require_once($_SERVER['DOCUMENT_ROOT'] ."/new/lang/cron_lang_id.php");
+            
+            require_once($_SERVER['DOCUMENT_ROOT'] ."/new/cron/cron_lang_id.php");
+            return $pes;
             break;
 
             case "0x0C09":
-            require_once($_SERVER['DOCUMENT_ROOT']  ."/new/lang/cron_lang_en.php");
+            require_once($_SERVER['DOCUMENT_ROOT']  ."/new/cron/cron_lang_en.php");
+            return $pes;
             //english
             break;
 
@@ -116,15 +135,18 @@ class PrayReminder_Cron
     //run on every 5 days
     }
 
-    public function get_status_weather($weather_code,$langid,$line_id)  {
+    public function get_status_weather($weathercode,$langid,$line_id)  {
         switch ($langid) {
             case "0x0421":
             //indonesian
-            require_once($_SERVER['DOCUMENT_ROOT'] ."/new/lang/cron_weather_lang_id.php");
+            require_once($_SERVER['DOCUMENT_ROOT'] ."/new/cron/cron_weather_lang_id.php");
+            return $pes;
             break;
 
             case "0x0C09":
-            require_once($_SERVER['DOCUMENT_ROOT']  ."/new/lang/cron_weather_lang_en.php");
+            require_once($_SERVER['DOCUMENT_ROOT']  ."/new/cron/cron_weather_lang_en.php");
+            return $pes;
+
             //english
             break;
 
