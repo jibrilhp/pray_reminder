@@ -30,17 +30,17 @@ class PrayReminder
         
     }
 
-    public function get_athan_data ($cityname) {
+    public function get_athan_data ($line_id) {
     //get data from database
     require($_SERVER['DOCUMENT_ROOT'] . "/new/secret/database.php");
 
-    $sql = "SELECT w_fajr,w_dhuhr,w_asr,w_maghrib,w_isya,w_dhuha,p_zone FROM tb_line WHERE p_city REGEXP ?";
+    $sql = "SELECT w_fajr,w_dhuhr,w_asr,w_maghrib,w_isha,p_zone,p_city FROM tb_line WHERE line_id =  '$line_id'";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s",$cityname);
+ 
     if ($stmt->execute()) {
-        $stmt->bind_result($fajr,$dhuhr,$asr,$maghrib,$isha,$zone);
+        $stmt->bind_result($fajr,$dhuhr,$asr,$maghrib,$isha,$zone,$city);
         while ($stmt->fetch()) {
-        $ret = array("fajr"=>$fajr,"dhuhr"=>$dhuhr,"asr"=>$asr,"maghrib"=>$maghrib,"isya"=>$isha,"zone"=>$zone);
+        $ret = array("fajr"=>$fajr,"dhuhr"=>$dhuhr,"asr"=>$asr,"maghrib"=>$maghrib,"isya"=>$isha,"zone"=>$zone,"city"=>$city);
         }
         return $ret;
     } else {
@@ -82,7 +82,7 @@ class PrayReminder
                 $dt_local = new DateTime($dt_UTC);
                 $dt_local->setTimezone(new DateTimeZone($tzone));
                 $dlocal = $dt_local->format("Y-m-d H:i:s");
-                if (new DateTime() > new DateTime($dlocal)) {
+                if (date("Y-m-d H:i:s") < new DateTime($dlocal)) {
                     $ar = array("id_code"=>$dt_weather,"cuaca"=>$datares['weather'][0]['id']);
                     return $ar;
                     break;
@@ -101,11 +101,11 @@ class PrayReminder
         
     }
 
-    public function get_timezone($cityname,$userid) {
+    public function get_timezone($cityname) {
         require($_SERVER['DOCUMENT_ROOT'] . "/new/secret/database.php");
 
-        if (isset($cityname)) {
-            $sql = "SELECT p_zone FROM tb_line WHERE p_city_weather REGEXP ?";
+        
+            $sql = "SELECT p_zone FROM tb_line WHERE p_city_weather = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s",$cityname);
             if ($stmt->execute()) {
@@ -115,20 +115,7 @@ class PrayReminder
             }
             
             return $tzone;
-            }
-                    
-        } else if (isset($userid)) {
-            $sql = "SELECT p_zone FROM tb_line WHERE line_id=?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s",$userid);
-            if ($stmt->execute()) {
-                $stmt->bind_result($arg1);
-            while ($stmt->fetch()) {
-                $tzone = $arg1;
-            }
-            return $tzone;
-            }
-
+        
         } else {
             return "error get time zone";
         }
@@ -236,6 +223,61 @@ class PrayReminder
 
     }
 
+    public function getCompassDirection($bearing) {
+        //thanks to https://www.dougv.com/2009/07/calculating-the-bearing-and-compass-rose-direction-between-two-latitude-longitude-coordinates-in-php/
+        $tmp = round($bearing / 22.5);
+        switch($tmp) {
+           case 1:
+              $direction = "NNE";
+              break;
+           case 2:
+              $direction = "NE";
+              break;
+           case 3:
+              $direction = "ENE";
+              break;
+           case 4:
+              $direction = "E";
+              break;
+           case 5:
+              $direction = "ESE";
+              break;
+           case 6:
+              $direction = "SE";
+              break;
+           case 7:
+              $direction = "SSE";
+              break;
+           case 8:
+              $direction = "S";
+              break;
+           case 9:
+              $direction = "SSW";
+              break;
+           case 10:
+              $direction = "SW";
+              break;
+           case 11:
+              $direction = "WSW";
+              break;
+           case 12:
+              $direction = "W";
+              break;
+           case 13:
+              $direction = "WNW";
+              break;
+           case 14:
+              $direction = "NW";
+              break;
+           case 15:
+              $direction = "NNW";
+              break;
+           default:
+              $direction = "N";
+        }
+        return $direction;
+     }
+
     public function set_user_weather($lat,$lon,$userid) {
         //$cityname1  = urlencode(html_entity_decode($cityname));
         require($_SERVER['DOCUMENT_ROOT'] . "/new/secret/database.php");
@@ -308,7 +350,10 @@ class PrayReminder
                 if ($result=mysqli_query($conn,$sqld)) {
                     $rowcount = mysqli_num_rows($result);
                     if ($rowcount > 0) {
+                        $std = "UPDATE `tb_line` SET `p_city_weather` = '$cityname' WHERE `tb_line`.`line_id` = '$userid'";
+                        mysqli_query($conn,$std);
                         $ar = array("status"=>"ok","fajr"=>$px1,"dhuhr"=>$px2,"asr"=>$px3,"maghrib"=>$px4,"isha"=>$px5,"zone"=>$tzone);
+
                         return $ar;
                     } else {
                         $pp = new PrayReminder();
@@ -328,6 +373,8 @@ class PrayReminder
 
     }
 
+
+    
     
 }
 

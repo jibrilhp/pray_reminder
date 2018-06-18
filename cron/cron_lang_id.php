@@ -8,13 +8,14 @@ switch ($status_salat) {
     break;
 
     case "2a":
-    $pes = "[Dzuhur Reminder] - " . $city_name . chr(10) . chr(10) 
-    . "Yuk, segera langkahkan ke masjid dan jangan lupa shalat rawatibnya ya!";
+    $pes = "[Jumat Reminder] - ". $city_name . chr(10) . chr(10) .
+    "Hai orang-orang beriman, apabila diseru untuk menunaikan shalat Jumat, maka bersegeralah kamu kepada mengingat Allah dan tinggalkanlah jual beli. Yang demikian itu lebih baik bagimu jika kamu mengetahui (Al-Jumu'ah Ayat 9)";
+    
     break;
 
     case "2b":
-    $pes = "[Jumat Reminder] - ". $city_name . chr(10) . chr(10) .
-    "Hai orang-orang beriman, apabila diseru untuk menunaikan shalat Jumat, maka bersegeralah kamu kepada mengingat Allah dan tinggalkanlah jual beli. Yang demikian itu lebih baik bagimu jika kamu mengetahui (Al-Jumu'ah Ayat 9)";
+    $pes = "[Dzuhur Reminder] - " . $city_name . chr(10) . chr(10) 
+    . "Yuk, segera langkahkan ke masjid dan jangan lupa shalat rawatibnya ya!";
     break;
 
     case "3":

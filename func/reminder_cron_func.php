@@ -9,7 +9,7 @@ class PrayReminder_Cron
     //run on cron only to reduce exceeded API requests
 
     public function sent_broadcast($line_id,$message) {
-    require($_SERVER['DOCUMENT_ROOT'] . '/new/linebot_sdk/LINEBotTiny.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/new/linebot_sdk/LINEBotTiny.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/new/secret/database.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/new/secret/flag.php');
         //sent a broadcast
@@ -64,6 +64,7 @@ class PrayReminder_Cron
             $time_now = date("H:i");
             $remind = new PrayReminder();
             $out = $remind->get_forecast_data($cityweather);
+            
             $res =  chr(10) . $pp->get_status_weather($out['cuaca'],$lang,$line);
            
             if ($time_now == $fajr) {
@@ -144,18 +145,18 @@ class PrayReminder_Cron
         while ($stmt->fetch()) {
 
 
-            $aa2 = "http://api.aladhan.com/timingsByAddress?address=" . $cityname1. "&method=5";
+            $aa2 = "http://api.aladhan.com/timingsByAddress?address=" . urlencode($cityname1) . "&method=5";
 
             $hasil2 = file_get_contents($aa2);
             
 
             $js_hasil2 = json_decode($hasil2,true);
             
-            $px1 = mysqli_real_escape_string($js_hasil2['data']['timings']['Fajr']);
-            $px2 = mysqli_real_escape_string($js_hasil2['data']['timings']['Dhuhr']);
-            $px3 = mysqli_real_escape_string($js_hasil2['data']['timings']['Asr']);
-            $px4 = mysqli_real_escape_string($js_hasil2['data']['timings']['Maghrib']);
-            $px5 = mysqli_real_escape_string($js_hasil2['data']['timings']['Isha']);
+            $px1 = mysqli_real_escape_string($conn,$js_hasil2['data']['timings']['Fajr']);
+            $px2 = mysqli_real_escape_string($conn,$js_hasil2['data']['timings']['Dhuhr']);
+            $px3 = mysqli_real_escape_string($conn,$js_hasil2['data']['timings']['Asr']);
+            $px4 = mysqli_real_escape_string($conn,$js_hasil2['data']['timings']['Maghrib']);
+            $px5 = mysqli_real_escape_string($conn,$js_hasil2['data']['timings']['Isha']);
 
             //updating city athan schedule...
 
@@ -193,6 +194,7 @@ class PrayReminder_Cron
     }
 
     public function get_status_weather($weathercode,$langid,$line_id)  {
+        $pes = '';
         switch ($langid) {
             case "0x0421":
             //indonesian
