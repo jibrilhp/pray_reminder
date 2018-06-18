@@ -7,10 +7,13 @@ Reminder cron run every minutes.
 
 require_once('./secret/flag.php');
 if (empty($_GET['key']) || $_GET['key'] !== cron_key) {
-    header("Content-type: application/json");
+    
     $ar = array("status"=>"400","message"=>"key value is missing or invalid");
-    echo json_encode($ar);
+    
     http_response_code(400);
+    error_log("Missing key value or invalid");
+    header("Content-type: application/json");
+    echo json_encode($ar);
     exit();
 }
 
@@ -27,9 +30,13 @@ if (isset($_GET['coba']) && $_GET['coba'] === 'ok') {
 }
 
 //search athan time and reminds where athan time = local time
-
-$xd->run_cron_athan();
-
+if (isset($_GET['run']) && $_GET['run'] == 'athan') {
+    $xd->run_cron_update_athan() ;
+} elseif (isset($_GET['run']) && $_GET['run'] == 'weather') {
+    $xd->run_cron_update_weather() ;
+} else {
+    $xd->run_cron_athan();
+}
 
 
 ?>

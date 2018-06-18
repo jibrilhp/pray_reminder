@@ -7,6 +7,7 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 
                 if ($remind->create_new_user($userID,$name) != "user_exist") {
+                 /*
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -16,6 +17,7 @@ foreach ($client->parseEvents() as $event) {
                             )
                         )
                     ));
+                    */
                 } else {
                     if (empty($profile->displayName)) {
                         $name = "none";
@@ -69,6 +71,7 @@ foreach ($client->parseEvents() as $event) {
                 break;
                 default:
                     if ($remind->create_new_user($userID,"-") != "user_exist") {
+                        /*
                         $client->replyMessage(array(
                             'replyToken' => $event['replyToken'],
                             'messages' => array(
@@ -78,6 +81,7 @@ foreach ($client->parseEvents() as $event) {
                                 )
                             )
                         ));
+                        */
                     } else {
                         $name = $profile->displayName;
                         $remind->chat_history($userID,$name,$message['text'],$event['replyToken']);
@@ -90,6 +94,7 @@ foreach ($client->parseEvents() as $event) {
         default:    
             
             if ($remind->create_new_user($userID,$name) != "user_exist") {
+                /*
                 $client->replyMessage(array(
                     'replyToken' => $event['replyToken'],
                     'messages' => array(
@@ -99,6 +104,7 @@ foreach ($client->parseEvents() as $event) {
                         )
                     )
                 ));
+                */
             } else {
                 $name = $profile->displayName;
                 $remind->chat_history($userID,$name,$message['text'],$event['replyToken']);

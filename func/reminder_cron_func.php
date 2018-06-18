@@ -10,6 +10,7 @@ class PrayReminder_Cron
 
     public function sent_broadcast($line_id,$message) {
     require($_SERVER['DOCUMENT_ROOT'] . '/new/linebot_sdk/LINEBotTiny.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/new/secret/database.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/new/secret/flag.php');
         //sent a broadcast
 
@@ -24,6 +25,12 @@ class PrayReminder_Cron
                     'text' => $message
                     )));
         $client->pushMessage($rep);
+        $line_id = mysqli_real_escape_string($conn,$line_id);
+        date_default_timezone_set("Asia/Jakarta");
+        $timestamp = time();
+        $sql = "UPDATE `tb_line` SET `p_sent` = '$timestamp' WHERE `tb_line`.`line_id` = '$line_id';";
+        mysqli_query($conn,$sql);
+
         sleep(1);
   
     return "success";
@@ -57,7 +64,7 @@ class PrayReminder_Cron
             $time_now = date("H:i");
             $remind = new PrayReminder();
             $out = $remind->get_forecast_data($cityweather);
-            $res = $pp->get_status_weather($out['cuaca'],$lang,$line);
+            $res =  chr(10) . $pp->get_status_weather($out['cuaca'],$lang,$line);
            
             if ($time_now == $fajr) {
                
@@ -128,11 +135,61 @@ class PrayReminder_Cron
 
     public function run_cron_update_athan () {
     //run on once a day
-        return 0;
+    require($_SERVER['DOCUMENT_ROOT'] . "/new/secret/database.php");
+        
+        $sql = "SELECT `line_id`,`p_city` FROM `tb_line`";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->bind_result($line_id,$cityname1);
+        while ($stmt->fetch()) {
+
+
+            $aa2 = "http://api.aladhan.com/timingsByAddress?address=" . $cityname1. "&method=5";
+
+            $hasil2 = file_get_contents($aa2);
+            
+
+            $js_hasil2 = json_decode($hasil2,true);
+            
+            $px1 = mysqli_real_escape_string($js_hasil2['data']['timings']['Fajr']);
+            $px2 = mysqli_real_escape_string($js_hasil2['data']['timings']['Dhuhr']);
+            $px3 = mysqli_real_escape_string($js_hasil2['data']['timings']['Asr']);
+            $px4 = mysqli_real_escape_string($js_hasil2['data']['timings']['Maghrib']);
+            $px5 = mysqli_real_escape_string($js_hasil2['data']['timings']['Isha']);
+
+            //updating city athan schedule...
+
+            $sqld = "UPDATE `tb_line` SET `w_fajr` = '$px1', `w_fajr` = '$px1', `w_dhuhr` = '$px2', `w_asr` = '$px3', `w_maghrib` = '$px4', `w_isha` = '$px5' WHERE `tb_line`.`line_id` = '$line_id'";
+            mysqli_query($conn,$sqld);
+
+        }
+    return true;
     }
 
     public function run_cron_update_weather () {
     //run on every 5 days
+    require($_SERVER['DOCUMENT_ROOT'] . "/new/secret/database.php");
+        
+        $sql = "SELECT `p_city` FROM `tb_weather` ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->bind_result($cityname);
+
+        while ($stmt->fetch()) {
+            //updating weather statistics
+
+            $link = "http://api.openweathermap.org/data/2.5/forecast?q=" . $cityname."&units=metric&appid=" . op_id;
+            date_default_timezone_set("Asia/Jakarta");
+            $timestamp = time();
+            $getdata = file_get_contents($link);
+            $ext = json_decode($getdata,true);
+            $cityname = $ext['city']['name'];
+
+            $sqld = "UPDATE `tb_weather` SET `p_json` = '$getdata',`p_updated`='$timestamp' WHERE `tb_weather`.`p_city` = '$cityname';";
+            mysqli_query($conn,$sqld);
+        }
+
+    return true;
     }
 
     public function get_status_weather($weathercode,$langid,$line_id)  {

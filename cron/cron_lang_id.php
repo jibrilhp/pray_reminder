@@ -23,20 +23,23 @@ switch ($status_salat) {
     break;
 
     case "4":
-    $pes = "[Maghrib Reminder] - " . $city_name . chr(10) . chr(10) .
-    "Yuk, zikir petangnya dibaca :)";
+    $pes = "[Maghrib Reminder] - " . $city_name . chr(10) . chr(10) ."Tidak ada Tuhan selain Allah Dzat yang Maha Esa yang tidak ada sekutu bagi-Nya, Dzat yang mematikan dan menghidupkan, bagi-Nya segala kerajaan dan pujian, Dia Maha Kuasa atas segala sesuatu";
     break;
 
     case "5":
-    $pes = "[Isya Reminder] - ". $city_name . chr(10) . chr(10) ;
+    $pes = "[Isya Reminder] - ". $city_name . chr(10) . chr(10) . "Seandainya mereka mengetahui keutamaan yang ada pada shala Isya’ dan shalat Shubuh, tentu mereka akan mendatanginya sambil merangkak.” (HR. Bukhari no. 615 dan Muslim no. 437)" ;
     break;
 
     case "6":
-    $pes = "[Dhuha Reminder]";
+    $pes = "[Dhuha Reminder] - " . $city_name . chr(10) . chr(10) .
+    "قَالَ اللَّهُ عَزَّ وَجَلَّ يَا ابْنَ آدَمَ لاَ تَعْجِزْ عَنْ أَرْبَعِ رَكَعَاتٍ مِنْ أَوَّلِ النَّهَارِ أَكْفِكَ آخِرَهُ" .chr(10) .
+    "Allah Ta’ala berfirman: Wahai anak Adam, janganlah engkau tinggalkan empat raka’at shalat di awal siang (di waktu Dhuha). Maka itu akan mencukupimu di akhir siang";
     break;
 
     case "7":
-    $pes = "[Tahajud Reminder]";
+    $pes = "[Tahajud Reminder] - " . $city_name . chr(10) . chr(10) .
+    "وَاعْلَمْ أَنَّ شَرَفَ الْـمُؤْمِنِ قِيَامُهُ بِاللَّيْلِ" .chr(10) . 
+    "Dan ketahuilah, bahwa kemuliaan dan kewibawaan seorang mukmin itu ada pada shalat malamnya";
     break;
 
 }
