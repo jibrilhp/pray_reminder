@@ -27,7 +27,7 @@ foreach ($client->parseEvents() as $event) {
                    
                     $remind->chat_history($userID,$name,$message['text'],$event['replyToken']);
                     //reply the args
-                    switch ($message['text']) {
+                    switch (strtolower($message['text'])) {
                         case "jadwal":
                         if ($remind->get_athan_data($userID) != 'failed') {
                             $res = $remind->get_athan_data($userID);
@@ -91,7 +91,23 @@ foreach ($client->parseEvents() as $event) {
                             'messages' => array(
                                 array(
                                     'type' => 'text',
-                                    'text' => 'Doa Harian '. chr(10) . chr(10) . $getd
+                                    'text' => '[Doa Harian] '. chr(10) . chr(10) . $getd
+                                    
+                                )
+                            )
+                        ));
+                        break;
+
+                        case "hadis harian":
+                        $get_hadidh = "http://selfreminder.000webhostapp.com/get_hadis.php";
+                        $out = file_get_contents($get_hadidh);
+                        $client->replyMessage(array(
+                            'replyToken' => $event['replyToken'],
+                            'messages' => array(
+                                array(
+                                    'type' => 'text',
+                                    'text' => '[Hadis Harian]' .chr (10) . chr(10).
+                                    $out
                                     
                                 )
                             )

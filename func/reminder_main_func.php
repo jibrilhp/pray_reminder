@@ -40,7 +40,7 @@ class PrayReminder
     if ($stmt->execute()) {
         $stmt->bind_result($fajr,$dhuhr,$asr,$maghrib,$isha,$zone,$city);
         while ($stmt->fetch()) {
-        $ret = array("fajr"=>$fajr,"dhuhr"=>$dhuhr,"asr"=>$asr,"maghrib"=>$maghrib,"isya"=>$isha,"zone"=>$zone,"city"=>$city);
+        $ret = array("fajr"=>$fajr,"dhuhr"=>$dhuhr,"asr"=>$asr,"maghrib"=>$maghrib,"isha"=>$isha,"zone"=>$zone,"city"=>$city);
         }
         return $ret;
     } else {
