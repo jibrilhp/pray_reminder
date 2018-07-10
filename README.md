@@ -49,4 +49,4 @@ curl "<your_server>/reminder_cron.php?key=0816851c86&run=weather"
 
 
 ## 4. Wait for athan reminder
-![alt text](https://bl3301files.storage.live.com/y4pgysAx9d0VFtwXRK6hlVyo6xaU_lJH_F3zEorwvwFNGQ26ztzB-6tB0osL8JwyB0NyT8qOosp_eypAFK023hda2KIvqL2AeIOYdQAYwt0bpFZLoGbr9RBqfra6pRL1h0S5p7HBcBSG_emmZ_UzjOSoQa2o55ASAjIPwD5hTNNmXXESHxoefdECL97AH3aQj7E/thumbnail_91F8468412D44390959FD99CEFA13720.png?psid=1&width=1026&height=403)
+![Screenshot]('https://vz8x3g.bl.files.1drv.com/y4mUz7nqrIXAPniGbmjGcBbnph2ks1VRL5dO1zJ3YvhKVkW8B5JA1tc6QwBCPJpet6qIfmqE6qgappkQCw__-pOxoNZKrT5PnkJOQbv011J6lxDYuz4OWMSxgb80YtqhONnwgDDzywIe2LdMs-hI0_GxNsdnyOHhSfG4tagczLXv3Dx_hu22Ha2R7QmDcQ5QL6Jik5WRgM_fwYc2VbLOxTeHw?width=1026&height=403&cropmode=none')
