@@ -46,3 +46,7 @@ curl "<your_server>/reminder_cron.php?key=0816851c86&run=athan"
 Create for every 5-day
 curl "<your_server>/reminder_cron.php?key=0816851c86&run=weather"
 ```
+
+
+## 4. Wait for athan reminder
+![alt text](https://bl3301files.storage.live.com/y4pgysAx9d0VFtwXRK6hlVyo6xaU_lJH_F3zEorwvwFNGQ26ztzB-6tB0osL8JwyB0NyT8qOosp_eypAFK023hda2KIvqL2AeIOYdQAYwt0bpFZLoGbr9RBqfra6pRL1h0S5p7HBcBSG_emmZ_UzjOSoQa2o55ASAjIPwD5hTNNmXXESHxoefdECL97AH3aQj7E/thumbnail_91F8468412D44390959FD99CEFA13720.png?psid=1&width=1026&height=403)
